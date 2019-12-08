@@ -25,3 +25,13 @@ mongoose.connect('mongodb://localhost:27017/todoList', function (err) {
         });
     }
 });
+
+var todoSchema = new Schema({
+    todoId : Number,
+    todoName: String,
+    todoDescription: String,
+    todoDay : String,
+    todoTime: String
+})
+
+var todo = mongoose.model("todo", todoSchema);
